@@ -1,0 +1,29 @@
+# Spring Web
+server:
+  # 服务端口
+  port: 8082
+  #context-path: /
+  
+# Spring
+spring:
+  resources:
+    # 默认 classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/
+    static-locations: classpath:/static/, classpath:/templates
+  mvc:
+    view:
+      suffix: .html
+
+# Beetl
+beetl:
+  # 启用Beetl
+  enabled: true
+  templatesPath: templates/
+  suffix: html
+  beetlsq:
+    # 上线要关闭
+    dev: true 
+
+# Beetl SQL
+beetlsql: 
+  # 关闭Beetl SQL
+  enabled: false
