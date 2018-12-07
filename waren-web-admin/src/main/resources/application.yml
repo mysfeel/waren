@@ -1,4 +1,4 @@
-# Spring Web
+# Spring Boot
 server:
   # 服务端口
   port: 8082
