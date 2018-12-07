@@ -12,6 +12,28 @@ spring:
   mvc:
     view:
       suffix: .html
+      
+dubbo:
+  scan: 
+    # Base packages to scan Dubbo Components (e.g., @Service, @Reference)
+    basePackage: org.waren
+    
+  # Dubbo Config properties
+  ## ApplicationConfig Bean
+  application:
+    id: dubbo-consumer-demo
+    name: dubbo-consumer-demo
+
+  ## ProtocolConfig Bean
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12345
+
+  ## RegistryConfig Bean
+  registry:
+    id: my-registry
+    address: 127.0.0.1
 
 # Beetl
 beetl:

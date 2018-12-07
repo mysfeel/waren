@@ -9,18 +9,15 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-
 	<artifactId>waren-web-admin</artifactId>
 	<packaging>jar</packaging>
-
-	<name>waren</name>
-	<description>WaRen Admin</description>
+	<name>WaRen Web Admin</name>
+	<description>WaRen Web Admin</description>
 
 	<properties>
 	</properties>
 
 	<dependencies>
-
 		<!-- Spring Boot Start -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -58,6 +55,23 @@
 			<artifactId>jackson-dataformat-yaml</artifactId>
 		</dependency>
 		<!-- /log4j2 end -->
+		
+		<!-- Alibaba Dubbo Start -->
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>org.springframework.boot</groupId> -->
+<!-- 					<artifactId>spring-boot-starter-logging</artifactId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>com.alibaba.spring</groupId> -->
+		<!-- <artifactId>spring-context-support</artifactId> -->
+		<!-- </dependency> -->
+		<!-- /Alibaba Dubbo End -->
 
 		<!-- Web MVC Start -->
 		<dependency>
@@ -81,6 +95,14 @@
 			<artifactId>beetl-framework-starter</artifactId>
 		</dependency>
 		<!-- Web MVC End -->
+		
+		<!-- WaRen Service Admin API Start -->
+		<dependency>
+			<groupId>org.waren</groupId>
+			<artifactId>waren-service-admin-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- /WaRen Service Admin API End -->
 
 	</dependencies>
 </project>

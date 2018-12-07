@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WarenApplication {
+public class WarenWebAdminApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WarenApplication.class, args);
+		SpringApplication.run(WarenWebAdminApplication.class, args);
 	}
 }
