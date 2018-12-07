@@ -6,11 +6,13 @@ package org.waren;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author think
  *
  */
+@Configuration
 @SpringBootApplication
 public class WarenServiceAdminApplication {
 
@@ -24,5 +26,4 @@ public class WarenServiceAdminApplication {
         .web(WebApplicationType.NONE)
         .run(args);
 	}
-
 }

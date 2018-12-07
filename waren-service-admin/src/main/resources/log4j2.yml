@@ -22,7 +22,7 @@ Loggers:
       AppenderRef:
         - ref: CONSOLE
     Logger: #单独设置某些包的输出级别
-      - name: org.springframework.web #复数加上-
+      - name: org.waren #复数加上-
         additivity: false #去除重复的log
         level: DEBUG
         AppenderRef:
