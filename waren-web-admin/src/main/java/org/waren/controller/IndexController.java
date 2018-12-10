@@ -22,7 +22,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 @Controller
 public class IndexController {
 	
-	@Reference(version = "1.0.0")
+	@Reference(version = "1.0.0", url = "dubbo://localhost:12345")
 	private IndexService indexService;
 
 	@RequestMapping("/")

@@ -6,25 +6,35 @@ spring:
 # Spring Boot Port
 server:
   port: 9001
-  
+
+# Dubbo
 dubbo:
   scan: 
     # Base packages to scan Dubbo Components (e.g., @Service, @Reference)
-    basePackage: org.waren.admin.service
-    
-  # Dubbo Config properties
-  ## ApplicationConfig Bean
+    basePackages: org.waren.admin.service
   application:
-    id: dubbo-provider-demo
-    name: dubbo-provider-demo
-
-  ## ProtocolConfig Bean
+    id: waren-service-admin
+    name: waren-service-admin
+#    qos:
+#      port: 22222
+#      enable: true
+  # ProtocolConfig Bean
   protocol:
     id: dubbo
     name: dubbo
     port: 12345
-
-  ## RegistryConfig Bean
+    status: server
+  # RegistryConfig Bean
   registry:
     id: my-registry
-    address: 127.0.0.1
+    address: N/A
+    
+# Dubbo Health
+management:
+  health:
+    dubbo:
+      status:
+        # StatusChecker Name defaults (default : "memory", "load" )
+        defaults: memory
+        # StatusChecker Name extras (default : empty )
+        extras: load,threadpool

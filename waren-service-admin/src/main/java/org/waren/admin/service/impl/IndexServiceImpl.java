@@ -8,11 +8,13 @@ import java.util.List;
 
 import org.waren.admin.service.IndexService;
 
+import com.alibaba.dubbo.config.annotation.Service;
+
 /**
  * @author think
  *
  */
-//@Service(version = "1.0.0")
+@Service(version = "1.0.0")
 public class IndexServiceImpl implements IndexService {
 
 	/*

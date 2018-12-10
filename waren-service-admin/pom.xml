@@ -47,12 +47,21 @@
 		</dependency>
 		<!-- /Alibaba Dubbo End -->
 
-		<!-- SLF4J 日志 Start -->
+		<!-- log4j2 start -->
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
-		<!-- SLF4J 日志 /End -->
+		<!-- 加上这个才能辨认到log4j2.yml文件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-json</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>
+		<!-- /log4j2 end -->
 
 		<!-- WaRen Service Admin API Start -->
 		<dependency>
