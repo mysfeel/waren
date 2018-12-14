@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.waren.controller;
+package org.waren.admin.controller;
 
 import java.util.List;
 
@@ -32,12 +32,12 @@ public class IndexController {
 		menus.forEach( m -> {
 			System.out.println(m);
 		});
-		return "forward:/index";
+		return "/index.html";
 	}
 	
 	@RequestMapping("/index")
 	public String index(Model model, HttpServletRequest request)
 	{
-		return "index";
+		return "/index.html";
 	}
 }

@@ -8,7 +8,7 @@ server:
 spring:
   resources:
     # 默认 classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/
-    static-locations: classpath:/static/, classpath:/templates
+    static-locations: classpath:/static/
   mvc:
     view:
       suffix: .html
@@ -33,8 +33,11 @@ dubbo:
 beetl:
   # 启用Beetl
   enabled: true
+  # .html模板路径
   templatesPath: templates/
+  # 支持后缀为.html的模板
   suffix: html
+  # 自动检查模板变化
   beetlsq:
     # 上线要关闭
     dev: true 
