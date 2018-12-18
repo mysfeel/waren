@@ -41,31 +41,50 @@ management:
         
 # Druid
 druid:
-    url: jdbc:mysql://192.168.1.11:10100/abc-dev?characterEncoding=utf-8
-    driver-class: com.mysql.jdbc.Driver
-    username: root
-    password: kKpt3SjkQlT6g79wKSFFVI9y4leZHLAzhahzNuwvVRUQN/ljiPwIjyTlaGMujHtEqCBA45YAH/hnuj9wS2TDoA==
-    initial-size: 1
-    min-idle: 1
-    max-active: 20
-    test-on-borrow: true
-    max-wait: 60000
-    time-between-eviction-runs-millis: 60000
-    min-evictable-idle-time-millis: 300000
-    validation-query: SELECT 1 FROM DUAL
-    test-While-Idle: true
-    test-on-return: false
-    pool-prepared-statements: false
-    max-pool-prepared-statement-per-connection-size: 20
-    filters: stat,wall,log4j,config
-    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMV1EoSTFHoH8n8PWbZW1U/qPQYpst8uOOu0R6967DJIX9g6MlDRJjpKK0jFCYeEa+MnLspcl9HvWuZUTkQeQZsCAwEAAQ==
-    monitor:
-      enabled: enabled
-      druid-stat-view: /druid/*
-      druid-web-stat-filter: /*
-      allow: 127.0.0.1
-      deny: 192.168.1.100
-      login-username: admin
-      login-password: 123456
-      exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
-      reset-enable: false
+  url: jdbc:mysql://127.0.0.1:3306/test-dev?characterEncoding=utf-8
+  driver-class: com.mysql.jdbc.Driver
+  username: root
+  password: kKpt3SjkQlT6g79wKSFFVI9y4leZHLAzhahzNuwvVRUQN/ljiPwIjyTlaGMujHtEqCBA45YAH/hnuj9wS2TDoA==
+  initial-size: 1
+  min-idle: 1
+  max-active: 20
+  test-on-borrow: true
+  max-wait: 60000
+  time-between-eviction-runs-millis: 60000
+  min-evictable-idle-time-millis: 300000
+  validation-query: SELECT 1 FROM DUAL
+  test-While-Idle: true
+  test-on-return: false
+  pool-prepared-statements: false
+  max-pool-prepared-statement-per-connection-size: 20
+  filters: stat,wall,log4j,config
+  connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMV1EoSTFHoH8n8PWbZW1U/qPQYpst8uOOu0R6967DJIX9g6MlDRJjpKK0jFCYeEa+MnLspcl9HvWuZUTkQeQZsCAwEAAQ==
+  monitor:
+    enabled: enabled
+    druid-stat-view: /druid/*
+    druid-web-stat-filter: /*
+    allow: 127.0.0.1
+    deny: 192.168.1.100
+    login-username: admin
+    login-password: 123456
+    exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+    reset-enable: false
+
+# 默认是true，即向控制台输出执行时候的sql，参数，执行时间，以及执行的位置，每次修改sql文件的时候，自动检测sql文件修改.
+beetl-beetlsql: dev
+
+ # Beetl Sql
+beetlsql:
+  # 默认为/sql, 作为存放sql文件的根目录，位于/resources/sql目录下
+  sqlPath: /sql
+  # 默认是org.beetl.sql.core.UnderlinedNameConversion,能将下划线分割的数据库命名风格转化为java驼峰命名风格，还有常用的DefaultNameConversion，数据库命名完全和Java命名一直，以及JPA2NameConversion，兼容JPA命名
+  nameConversion: org.beetl.sql.core.UnderlinedNameConversion
+  # 默认为Dao
+  daoSuffix: Dao
+  # 默认为com，此选项配置beetlsql.daoSuffix来自动扫描com包极其子包下的所有以Dao结尾的Mapper类。以本章例子而言，你可以配置“com.bee.sample.ch5.dao”
+  basePackage: org.waren.common.beetl
+  # 数据库风格，默认是org.beetl.sql.core.db.MySqlStyle.对应不同的数据库，其他还有OracleStyle，PostgresStyle,SqlServerStyle,DB2SqlStyle,SQLiteStyle,H2Style
+  dbStyle: org.beetl.sql.core.db.MySqlStyle
+  
+
+

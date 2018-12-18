@@ -25,7 +25,7 @@
 		<java.version>1.8</java.version>
 
 		<!-- 扩展包 -->
-		<ibeetl.version>1.1.69.RELEASE</ibeetl.version>
+		<ibeetl.version>1.1.70.RELEASE</ibeetl.version>
 		<dubbo-spring-boot-start.version>0.2.0</dubbo-spring-boot-start.version>
 		<!-- <dubbo-spring-boot-support.version>1.0.2</dubbo-spring-boot-support.version> -->
 <!-- 		<druid-spring-boot-start.version>1.1.10</druid-spring-boot-start.version> -->
@@ -68,6 +68,7 @@
 		<module>waren-service-admin</module>
 		<module>waren-service-admin-api</module>
 		<module>waren-common-druid</module>
+		<module>waren-common-beetl</module>
 	</modules>
 
 	<build>

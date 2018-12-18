@@ -34,20 +34,7 @@
 		</dependency>
 		<!-- /Spring Boot End -->
 
-		<!-- Alibaba Dubbo Start -->
-		<dependency>
-			<groupId>com.alibaba.boot</groupId>
-			<artifactId>dubbo-spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- /Alibaba Dubbo End -->
-
-		<!-- log4j2 start -->
+		<!-- Log4j2 start -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
@@ -61,7 +48,20 @@
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-yaml</artifactId>
 		</dependency>
-		<!-- /log4j2 end -->
+		<!-- /Log4j2 end -->
+
+		<!-- Alibaba Dubbo Start -->
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- /Alibaba Dubbo End -->
 
 		<!-- WaRen Service Admin API Start -->
 		<dependency>
@@ -70,7 +70,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- /WaRen Service Admin API End -->
-		
+
 		<!-- WaRen Common Druid Start -->
 		<dependency>
 			<groupId>org.waren</groupId>
@@ -79,5 +79,12 @@
 		</dependency>
 		<!-- /WaRen Common Druid End -->
 
+		<!-- WaRen Common Beetl Start -->
+		<dependency>
+			<groupId>org.waren</groupId>
+			<artifactId>waren-common-beetl</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- /WaRen Common Beetl End -->
 	</dependencies>
 </project>
