@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: WaRen Common Druid
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: think
+Implementation-Vendor-Id: org.waren
+Build-Jdk: 1.8.0_31
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/waren/waren-common-druid
+Created-By: Maven Integration for Eclipse
+

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,12 +7,9 @@
 		<artifactId>waren</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>waren-service-admin</artifactId>
-	<name>WaRen Service Admin</name>
-	<description>WaRen Service Admin</description>
-
-	<properties>
-	</properties>
+	<artifactId>waren-common-druid</artifactId>
+	<name>WaRen Common Druid</name>
+	<description>WaRen Common Druid</description>
 
 	<dependencies>
 		<!-- Spring Boot Start -->
@@ -34,18 +30,13 @@
 		</dependency>
 		<!-- /Spring Boot End -->
 
-		<!-- Alibaba Dubbo Start -->
+		<!-- ConfigurationProperties需要 Start -->
 		<dependency>
-			<groupId>com.alibaba.boot</groupId>
-			<artifactId>dubbo-spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
 		</dependency>
-		<!-- /Alibaba Dubbo End -->
+		<!-- /ConfigurationProperties需要 End -->
 
 		<!-- log4j2 start -->
 		<dependency>
@@ -63,21 +54,28 @@
 		</dependency>
 		<!-- /log4j2 end -->
 
-		<!-- WaRen Service Admin API Start -->
+		<!-- Druid Start -->
 		<dependency>
-			<groupId>org.waren</groupId>
-			<artifactId>waren-service-admin-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.12</version>
 		</dependency>
-		<!-- /WaRen Service Admin API End -->
-		
-		<!-- WaRen Common Druid Start -->
+		<!-- 解决找不到org.apache.log4j.Priority -->
 		<dependency>
-			<groupId>org.waren</groupId>
-			<artifactId>waren-common-druid</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
-		<!-- /WaRen Common Druid End -->
-
+		<!-- MySql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- Druid 监听使用 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- /Druid End -->
 	</dependencies>
 </project>

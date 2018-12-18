@@ -27,7 +27,8 @@
 		<!-- 扩展包 -->
 		<ibeetl.version>1.1.69.RELEASE</ibeetl.version>
 		<dubbo-spring-boot-start.version>0.2.0</dubbo-spring-boot-start.version>
-<!-- 		<dubbo-spring-boot-support.version>1.0.2</dubbo-spring-boot-support.version> -->
+		<!-- <dubbo-spring-boot-support.version>1.0.2</dubbo-spring-boot-support.version> -->
+<!-- 		<druid-spring-boot-start.version>1.1.10</druid-spring-boot-start.version> -->
 	</properties>
 
 	<dependencyManagement>
@@ -45,12 +46,20 @@
 				<artifactId>dubbo-spring-boot-starter</artifactId>
 				<version>${dubbo-spring-boot-start.version}</version>
 			</dependency>
-<!-- 			<dependency> -->
-<!-- 				<groupId>com.alibaba.spring</groupId> -->
-<!-- 				<artifactId>spring-context-support</artifactId> -->
-<!-- 				<version>${dubbo-spring-boot-support.version}</version> -->
-<!-- 			</dependency> -->
+			<!-- <dependency> -->
+			<!-- <groupId>com.alibaba.spring</groupId> -->
+			<!-- <artifactId>spring-context-support</artifactId> -->
+			<!-- <version>${dubbo-spring-boot-support.version}</version> -->
+			<!-- </dependency> -->
 			<!-- /Alibaba Dubbo End -->
+
+			<!-- Alibaba Druid Start -->
+<!-- 			<dependency> -->
+<!-- 				<groupId>com.alibaba</groupId> -->
+<!-- 				<artifactId>druid-spring-boot-starter</artifactId> -->
+<!-- 				<version>${druid-spring-boot-start.version}</version> -->
+<!-- 			</dependency> -->
+			<!-- /Alibaba Druid End -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -58,6 +67,7 @@
 		<module>waren-web-admin</module>
 		<module>waren-service-admin</module>
 		<module>waren-service-admin-api</module>
+		<module>waren-common-druid</module>
 	</modules>
 
 	<build>
