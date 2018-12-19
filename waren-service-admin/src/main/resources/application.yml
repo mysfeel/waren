@@ -82,7 +82,7 @@ beetlsql:
   # 默认为Dao
   daoSuffix: Dao
   # 默认为com，此选项配置beetlsql.daoSuffix来自动扫描com包极其子包下的所有以Dao结尾的Mapper类。以本章例子而言，你可以配置“com.bee.sample.ch5.dao”
-  basePackage: org.waren.common.beetl
+  basePackage: org.waren.common.dao
   # 数据库风格，默认是org.beetl.sql.core.db.MySqlStyle.对应不同的数据库，其他还有OracleStyle，PostgresStyle,SqlServerStyle,DB2SqlStyle,SQLiteStyle,H2Style
   dbStyle: org.beetl.sql.core.db.MySqlStyle
   

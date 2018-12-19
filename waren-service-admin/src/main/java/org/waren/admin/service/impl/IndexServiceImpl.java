@@ -8,8 +8,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.waren.admin.service.IndexService;
-import org.waren.common.beetl.UserDao;
-import org.waren.common.pojo.User;
+import org.waren.common.dao.SysMenuDao;
+import org.waren.common.pojo.SysMenu;
 
 import com.alibaba.dubbo.config.annotation.Service;
 
@@ -21,7 +21,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 public class IndexServiceImpl implements IndexService {
 
 	@Autowired
-	private UserDao userDao;
+	private SysMenuDao sysMenuDao;
 	
 	/*
 	 * (non-Javadoc)
@@ -30,16 +30,13 @@ public class IndexServiceImpl implements IndexService {
 	 */
 	@Override
 	public List<String> menus() {
-		List<String> list = new ArrayList<>();
-		list.add("Menu");
+		List<SysMenu> all = sysMenuDao.all();
 		
-		List<User> list2 = userDao.select("a");
-		
-		list2.forEach(u -> {
-			System.out.println(u.getId());
+		all.forEach(m -> {
+			System.out.println(m.getId());
 		});
 		
-		return list;
+		return new ArrayList<String>();
 	}
 
 }

@@ -24,6 +24,12 @@
 			<groupId>com.ibeetl</groupId>
 			<artifactId>beetl-framework-starter</artifactId>
 		</dependency>
+		<!-- 用于代码生成 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<!-- /Beetl Start -->
 	</dependencies>
 </project>

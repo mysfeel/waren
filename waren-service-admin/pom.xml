@@ -39,8 +39,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
-		<!-- 加上这个才能辨认到log4j2.yml文件 -->
-		<dependency>
+		<dependency><!-- 加上这个才能辨认到log4j2.yml文件 -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-json</artifactId>
 		</dependency>
@@ -71,20 +70,17 @@
 		</dependency>
 		<!-- /WaRen Service Admin API End -->
 
-		<!-- WaRen Common Druid Start -->
+		<!-- WaRen Common Start -->
 		<dependency>
 			<groupId>org.waren</groupId>
 			<artifactId>waren-common-druid</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<!-- /WaRen Common Druid End -->
-
-		<!-- WaRen Common Beetl Start -->
 		<dependency>
 			<groupId>org.waren</groupId>
 			<artifactId>waren-common-beetl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<!-- /WaRen Common Beetl End -->
+		<!-- /WaRen Common End -->
 	</dependencies>
 </project>

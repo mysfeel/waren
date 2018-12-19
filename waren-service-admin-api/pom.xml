@@ -11,4 +11,14 @@
 	<artifactId>waren-service-admin-api</artifactId>
 	<name>WaRen Service Admin API</name>
 	<description>WaRen Service Admin API</description>
+
+	<dependencies>
+		<!-- WaRen Common Start -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.waren</groupId> -->
+<!-- 			<artifactId>waren-common-beetl</artifactId> -->
+<!-- 			<version>0.0.1-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
+		<!-- /WaRen Common End -->
+	</dependencies>
 </project>
