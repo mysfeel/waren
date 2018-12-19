@@ -3,7 +3,6 @@
  */
 package org.waren.admin.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +28,8 @@ public class IndexServiceImpl implements IndexService {
 	 * @see org.waren.admin.service.IndexService#menus()
 	 */
 	@Override
-	public List<String> menus() {
-		List<SysMenu> all = sysMenuDao.all();
-		
-		all.forEach(m -> {
-			System.out.println(m.getId());
-		});
-		
-		return new ArrayList<String>();
+	public List<SysMenu> menus() {
+		return sysMenuDao.all();
 	}
 
 }

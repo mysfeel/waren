@@ -7,8 +7,12 @@ import org.beetl.sql.core.annotatoin.Table;
 * gen by beetlsql 2018-12-19
 */
 @Table(name = "test-dev.sys_menu")
-public class SysMenu {
+public class SysMenu extends Abs {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7149818341633634653L;
 	/*
 	 * 菜单ID
 	 */

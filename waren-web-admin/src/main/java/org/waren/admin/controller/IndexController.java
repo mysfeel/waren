@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.waren.admin.service.IndexService;
+import org.waren.common.pojo.SysMenu;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 
@@ -28,9 +29,9 @@ public class IndexController {
 	@RequestMapping("/")
 	public String root(Model model, HttpServletRequest request)
 	{
-		List<String> menus = indexService.menus();
+		List<SysMenu> menus = indexService.menus();
 		menus.forEach( m -> {
-			System.out.println(m);
+			System.out.println(m.getId());
 		});
 		return "/index.html";
 	}

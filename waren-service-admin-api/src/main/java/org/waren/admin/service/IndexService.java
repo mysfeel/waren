@@ -5,6 +5,8 @@ package org.waren.admin.service;
 
 import java.util.List;
 
+import org.waren.common.pojo.SysMenu;
+
 /**
  * Index Service 首页
  * 
@@ -18,5 +20,5 @@ public interface IndexService {
 	 * 
 	 * @return
 	 */
-	List<String> menus();
+	List<SysMenu> menus();
 }

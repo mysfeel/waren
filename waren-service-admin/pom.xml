@@ -76,11 +76,11 @@
 			<artifactId>waren-common-druid</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>org.waren</groupId>
-			<artifactId>waren-common-beetl</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.waren</groupId> -->
+<!-- 			<artifactId>waren-common-beetl</artifactId> -->
+<!-- 			<version>0.0.1-SNAPSHOT</version> -->
+<!-- 		</dependency> -->
 		<!-- /WaRen Common End -->
 	</dependencies>
 </project>

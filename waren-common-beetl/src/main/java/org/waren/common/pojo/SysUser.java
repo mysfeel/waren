@@ -9,8 +9,13 @@ import org.beetl.sql.core.annotatoin.Table;
 * gen by beetlsql 2018-12-19
 */
 @Table(name = "test-dev.sys_user")
-public class SysUser {
+public class SysUser extends Abs {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8042744565445284483L;
+	
 	private Long id;
 	/*
 	 * 注册邮箱

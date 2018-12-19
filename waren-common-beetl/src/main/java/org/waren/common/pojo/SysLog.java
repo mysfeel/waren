@@ -9,8 +9,12 @@ import org.beetl.sql.core.annotatoin.Table;
 * gen by beetlsql 2018-12-19
 */
 @Table(name = "test-dev.sys_log")
-public class SysLog {
+public class SysLog extends Abs {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6815438186465363319L;
 	private String content;
 	private String type;
 	private Long userId;
